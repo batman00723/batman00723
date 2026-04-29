@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠 Technical Skills
+## Technical Skills
 *   **Languages:** Python 
 *   **Frameworks & Libraries:** LangGraph, Django Ninja, Scikit-learn, SQLAlchemy, LangChain, Pandas, Matplotlib.
 *   **AI:** Agentic Workflows, Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), Vector Search, Hybrid Retrieval, Reranking, Embeddings
@@ -15,7 +15,7 @@
 
 ---
 
-## 🚀 Featured AI Projects
+##  Projects
 
 ### [Newsletter Agent](https://github.com/batman00723/Aman-Times-Newsletter.git) | 2026
 *   **Agentic Architecture:** Engineered a stateful, multi-node workflow using **LangGraph** to automate deep research and analysis.
@@ -38,7 +38,7 @@
 
 ---
 
-## 🎓 Education
+##  Education
 *   **B.E. Computer Science & Engineering**
 *   **Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)**, Bhopal
 *   *Expected Graduation: 2027*
