@@ -15,7 +15,7 @@
 
 ---
 
-##  Projects
+##  Featured Projects
 
 ### [Newsletter Agent](https://github.com/batman00723/Aman-Times-Newsletter.git) | 2026
 *   **Agentic Architecture:** Engineered a stateful, multi-node workflow using **LangGraph** to automate deep research and analysis.
@@ -42,3 +42,8 @@
 *   **B.E. Computer Science & Engineering**
 *   **Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)**, Bhopal
 *   *Expected Graduation: 2027*
+
+  Currently building AI systems focused on:
+- Autonomous agents
+- Retrieval systems
+- Real-world automation workflows
