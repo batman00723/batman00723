@@ -6,35 +6,38 @@
 
 ---
 
-## Technical Skills
-*   **Languages:** Python 
-*   **Frameworks & Libraries:** LangGraph, Django Ninja, Scikit-learn, SQLAlchemy, LangChain, Pandas, Matplotlib.
-*   **AI:** Agentic Workflows, Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), Vector Search, Hybrid Retrieval, Reranking, Embeddings
-*   **Databases:** PostgreSQL
-*   **Tools & Concepts:** REST APIs, Git, Web Scraping (Crawl4AI), Tavily Search API
+# TECHNICAL SKILLS
+**Languages:** Python
+**Frameworks & Libraries:** Django Ninja, LangGraph, LangChain, Scikit-learn, SQLAlchemy.
+**AI / ML:** Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Agentic Workflows, Hybrid Retrieval, Reranking, Embeddings
+**Databases:** PostgreSQL
+**Tools & Concepts:** REST APIs, Docker, Git, Web Scraping (Crawl4AI, Trafilatura), Tavily Search API, Celery, Redis
+**AI Observability & Tracing:** LangSmith
 
----
+# PROJECTS
+## Newsletter Agent | 2026
+**Live Link:** [Click here](https://aman-times-newsletter.up.railway.app/api_v1/docs)  ||    **GitHub:** [Click here](https://github.com/batman00723/Aman-Times-Newsletter.git)
+· Deployed a containerised agentic LLM system (LangGraph) that autonomously generates structured newsletters from real-time web data.
+· Deployed on Railway free tier with Cerebras free tier — rate limiting under concurrent load is a known issue, fix is a fallback model chain or moving to paid tier.
+· Achieved ~75% latency reduction (95s → 25s) and ~6x improvement in tail latency (P99) by eliminating browser scraping and optimizing pipeline execution by replacing browser-based scraping with lightweight HTTP parsing and reducing pipeline bottlenecks and with deliberate model selection — Cerebras Llama 8B (~1000 tokens/sec)
+· Cut token usage by ~50% (40k → <15k) by trimming excessive content, lowering inference cost and improving response time.
+· Implemented router-based self-correction loop with retry cap (iter≥2) to prevent infinite loops while eliminating hallucinations against source articles.
+· Designed asynchronous email dispatch with Celery and Redis background workers; deployment version was simplified to fit free-tier infrastructure limits.
+· Added unit tests for LLM pipeline nodes using pytest, mocking LLM and external dependencies to validate system logic and ensure deterministic behaviour.
 
-##  Featured Projects
+## RAG Powered Job Matching Agent | 2026
+**GitHub:** [Click here](https://github.com/batman00723/Job-Search-Agent/tree/feature/self-correction-loop)
+· Architected a multi-node LangGraph pipeline with intent classification, query rewriting, web scraping, and LLM-based resume-to-job matching.
+· Built a RAG pipeline from scratch — custom chunking, embedding generation, hybrid retrieval (vector + keyword), and cross-encoder reranking.
+· Implemented document ingestion as a decoupled background task using Celery and Redis.
+· Integrated Crawl4AI for real-time job page scraping and Tavily for web search with a 3-retry fallback loop on query rewriting.
+· Implemented a self-reflection loop where a critique LLM reviews match reports for hallucinations and scoring accuracy before returning results.
+· Persisted multi-turn conversation memory using PostgreSQL checkpointing via LangGraph's PostgresSaver.
 
-### [Newsletter Agent](https://github.com/batman00723/Aman-Times-Newsletter.git) | 2026
-*   **Agentic Architecture:** Engineered a stateful, multi-node workflow using **LangGraph** to automate deep research and analysis.
-*   **Self-Correction Loop:** Developed a **Reflection Node** that autonomously critiques drafts against source data to eliminate hallucinations.
-*   **Async Ingestion:** Leveraged **Crawl4AI** with asynchronous concurrency to extract clean markdown from diverse, high-impact news sources.
-*   **Intelligent Filtering:** Implemented an LLM-based scoring rubric to deduplicate and prioritize news on a 1–10 impact scale.
-*   **Production Backend:** Architected a type-safe API using **Django Ninja** and **Pydantic** for automated HTML briefing generation and dispatch.
-*   **Optimization:** Transformed 2+ hours of manual research into a 60-second autonomous pipeline.
-
-### [RAG-Powered Job Matching Agent](https://github.com/batman00723/Job-Search-Agent.git) | 2026
-*   **Multi-Node Pipeline:** Architected an agentic pipeline involving intent classification, query rewriting, and LLM-based resume-to-job matching.
-*   **Custom RAG Infrastructure:** Built a reusable RAG pipeline from scratch featuring custom chunking, hybrid retrieval (vector + keyword), and cross-encoder reranking.
-*   **Real-time Scraping:** Integrated **Crawl4AI** for live job page extraction with a 3-retry fallback loop on query rewriting.
-*   **State Persistence:** Managed multi-turn conversation memory using **PostgreSQL checkpointing** via LangGraph's `PostgresSaver`.
-
-### [Credit Card Default Risk Modelling](https://github.com/batman00723/credit_card_default_ml.git) | 2025
-*   **Feature Engineering:** Engineered behavioral risk signals (delinquency recency, payment discipline) from 30K records.
-*   **Bias Mitigation:** Explicitly excluded demographic features to eliminate algorithmic bias and ensure ethical outputs.
-*   **Model Benchmarking:** Evaluated 3 models; selected **Random Forest** for superior generalization and validation stability over Gradient Boosting.
+## Credit Card Default Risk Modelling | 2025
+**GitHub:** [Click here](https://github.com/batman00723/credit_card_default_ml.git)
+· Engineered behavioural risk signals (delinquency recency, payment discipline, utilisation) from 30K records; excluded demographic features like gender to eliminate bias.
+· Benchmarked 3 models; rejected Gradient Boosting despite equal ROC-AUC due to validation instability, selected constrained Random Forest for generalisation reliability.
 
 ---
 
