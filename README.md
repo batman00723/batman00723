@@ -7,11 +7,17 @@
 ---
 
 # TECHNICAL SKILLS
+
 **Languages:** Python
+
 **Frameworks & Libraries:** Django Ninja, LangGraph, LangChain, Scikit-learn, SQLAlchemy.
+
 **AI / ML:** Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Agentic Workflows, Hybrid Retrieval, Reranking, Embeddings
+
 **Databases:** PostgreSQL
+
 **Tools & Concepts:** REST APIs, Docker, Git, Web Scraping (Crawl4AI, Trafilatura), Tavily Search API, Celery, Redis
+
 **AI Observability & Tracing:** LangSmith
 
 # PROJECTS
