@@ -50,7 +50,7 @@
   patient interactions.
   
 - Developed a hybrid RAG pipeline with embedding-based retrieval and reranking to deliver grounded, hallucination-resistant responses from clinic knowledge bases.
-- 
+ 
 - Integrated automated calendar scheduling, slot availability checking, UTC timezone normalization, and emergency escalation workflows with external APIs and notification 
   systems.
   
