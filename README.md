@@ -40,6 +40,20 @@
 
 · Added unit tests for LLM pipeline nodes using pytest, mocking LLM and external dependencies to validate system logic and ensure deterministic behaviour.
 
+## AI Receptionist Agent | 2026
+
+**GitHub:** [Click here](https://github.com/batman00723/AI-Receptionist.git)
+
+- Built an AI-powered dental receptionist agent using LangGraph and LLM-based workflow orchestration for appointment booking, FAQ handling, and emergency escalation.
+  
+- Engineered a stateful multi-node conversational system with intent routing, structured data extraction, validation pipelines, and context-aware memory handling for real-time 
+  patient interactions.
+  
+- Developed a hybrid RAG pipeline with embedding-based retrieval and reranking to deliver grounded, hallucination-resistant responses from clinic knowledge bases.
+- 
+- Integrated automated calendar scheduling, slot availability checking, UTC timezone normalization, and emergency escalation workflows with external APIs and notification 
+  systems.
+  
 ## RAG Powered Job Matching Agent | 2026
 
 **GitHub:** [Click here](https://github.com/batman00723/Job-Search-Agent/tree/feature/self-correction-loop)
