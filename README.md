@@ -1,5 +1,5 @@
 # Aman Mishra
-**AI & Machine Learning Engineer**  
+**AI Application Engineer**  
 *Bhopal, India | Final Year CSE @ RGPV University*
 
 [📧 Email](mailto:batmanmishra23@gmail.com) | [🔗 LinkedIn](https://linkedin.com/in/amanmishra232005) | [💻 GitHub](https://github.com/batman00723)
