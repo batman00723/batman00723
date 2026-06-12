@@ -24,7 +24,7 @@
 
 ## Newsletter Agent | 2026
 
-**Live Link:** [Click here](https://aman-times-newsletter.up.railway.app/api_v1/docs)  ||    **GitHub:** [Click here](https://github.com/batman00723/Aman-Times-Newsletter.git)
+**Live Link:** [Click here](https://newsletter-yend.onrender.com/api_v1/docs)  ||    **GitHub:** [Click here](https://github.com/batman00723/Aman-Times-Newsletter.git)
 
 · Deployed a containerised agentic LLM system (LangGraph) that autonomously generates structured newsletters from real-time web data.
 
