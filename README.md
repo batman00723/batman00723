@@ -1,91 +1,119 @@
 # Aman Mishra
+
 **AI Application Engineer**  
 *Bhopal, India | Final Year CSE @ RGPV University*
 
-[📧 Email](mailto:batmanmishra23@gmail.com) | [🔗 LinkedIn](https://linkedin.com/in/amanmishra232005) | [💻 GitHub](https://github.com/batman00723)
+[Portfilio](https://portfolio-website-rho-lyart.vercel.app/) | [Email](mailto:batmanmishra23@gmail.com) | [LinkedIn](https://linkedin.com/in/amanmishra232005)
 
 ---
 
-# TECHNICAL SKILLS
+# Technical Skills
 
-**Languages:** Python
+### Languages
+- Python
 
-**Frameworks & Libraries:** Django Ninja, LangGraph, LangChain, Scikit-learn, SQLAlchemy.
+### Frameworks & Libraries
+- Django Ninja
+- LangGraph
+- LangChain
+- Scikit-learn
+- SQLAlchemy
 
-**AI / ML:** Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Agentic Workflows, Hybrid Retrieval, Reranking, Embeddings
+### AI / ML
+- Large Language Models (LLMs)
+- Retrieval-Augmented Generation (RAG)
+- Agentic Workflows
+- Hybrid Retrieval
+- Reranking
+- Embeddings
 
-**Databases:** PostgreSQL
+### Databases
+- PostgreSQL
 
-**Tools & Concepts:** REST APIs, Docker, Git, Web Scraping (Crawl4AI, Trafilatura), Tavily Search API, Celery, Redis
+### Tools & Concepts
+- REST APIs
+- Docker
+- Git
+- Web Scraping (Crawl4AI, Trafilatura)
+- Tavily Search API
+- Celery
+- Redis
 
-**AI Observability & Tracing:** LangSmith
+### AI Observability & Tracing
+- LangSmith
 
-# PROJECTS
+---
 
-## Newsletter Agent | 2026
+# Projects
 
-**Live Link:** [Click here](https://newsletter-yend.onrender.com/api_v1/docs)  ||    **GitHub:** [Click here](https://github.com/batman00723/Aman-Times-Newsletter.git)
+## AI Receptionist Agent
 
-· Deployed a containerised agentic LLM system (LangGraph) that autonomously generates structured newsletters from real-time web data.
+**Live Demo:** https://ai-receptionist-e48c.onrender.com/api_v1/docs
 
-· Deployed on Railway free tier with Cerebras free tier — rate limiting under concurrent load is a known issue, fix is a fallback model chain or moving to paid tier.
+- Built and deployed an AI Receptionist for dental clinics using LangGraph, automating appointment booking, cancellation, rescheduling, FAQ handling, and emergency escalation.
+- Engineered a stateful scheduling workflow with PostgreSQL-backed memory, validation pipelines, and automated IST→UTC conversion for Cal.com integrations.
+- Implemented Hybrid RAG with pgvector semantic search and caching, reducing repeated FAQ latency from ~2.8s to ~1.0s while maintaining grounded responses.
+- Designed fault-tolerant workflows with automated supervisor email escalation during calendar API failures.
+- Integrated Twilio WhatsApp Webhooks, Cal.com scheduling APIs, LangSmith tracing, and PostgreSQL persistence to support production-grade conversational appointment management.
 
-· Achieved ~75% latency reduction (95s → 25s) and ~6x improvement in tail latency (P99) by eliminating browser scraping and optimizing pipeline execution by replacing browser-   based scraping with lightweight HTTP parsing and reducing pipeline bottlenecks and with deliberate model selection — Cerebras Llama 8B (~1000 tokens/sec)
+---
 
-· Cut token usage by ~50% (40k → <15k) by trimming excessive content, lowering inference cost and improving response time.
+## Newsletter Agent
 
-· Implemented router-based self-correction loop with retry cap (iter≥2) to prevent infinite loops while eliminating hallucinations against source articles.
+**Subscribe Here:** https://newsletter-yend.onrender.com/
 
-· Designed asynchronous email dispatch with Celery and Redis background workers; deployment version was simplified to fit free-tier infrastructure limits.
+- Built a LangGraph workflow that researches geopolitical events, ranks source relevance, generates newsletters, validates outputs, and delivers reports via email.
+- Used LangSmith traces to identify browser scraping as the primary bottleneck; replaced it with Trafilatura HTML parsing, reducing latency ~80% (95s → 15s) and improving P99 tail latency 6x. Cut token usage ~70% (40k → 13k) via content filtering and context-size optimisation, lowering inference cost.
+- Implemented an LLM reflection loop to validate generated newsletters against source articles before delivery.
+- Scheduled cron job for automated Newsletter delivery via Brevo Email API.
 
-· Added unit tests for LLM pipeline nodes using pytest, mocking LLM and external dependencies to validate system logic and ensure deterministic behaviour.
+---
 
-## AI Receptionist Agent | 2026
+## Meeting Analyser
 
-**GitHub:** [Click here](https://github.com/batman00723/AI-Receptionist.git)
+**Live Demo:** https://arvya-meeting-analyser.onrender.com/api_v1/docs
 
-- Built an AI-powered dental receptionist agent using LangGraph and LLM-based workflow orchestration for appointment booking, FAQ handling, and emergency escalation.
-  
-- Engineered a stateful multi-node conversational system with intent routing, structured data extraction, validation pipelines, and context-aware memory handling for real-time 
-  patient interactions.
-  
-- Developed a hybrid RAG pipeline with embedding-based retrieval and reranking to deliver grounded, hallucination-resistant responses from clinic knowledge bases.
- 
-- Integrated automated calendar scheduling, slot availability checking, UTC timezone normalization, and emergency escalation workflows with external APIs and notification 
-  systems.
-  
-## RAG Powered Job Matching Agent | 2026
+- Designed and deployed a LangGraph-based workflow engine for meeting intelligence, modeling report generation, persistence, and delivery as extensible processing nodes.
+- Built a reusable transcript-processing pipeline supporting multiple ingestion paths while maintaining a single analysis layer, reducing workflow duplication and simplifying future integrations.
+- Implemented schema-driven LLM extraction with Qwen3-32B and Groq Whisper, converting unstructured audio and transcript data into structured business intelligence artifacts.
+- Developed resilient file-processing infrastructure using UUID-prefixed storage, automatic resource cleanup, database persistence, and workflow-level error handling.
+- Deployed a production backend on Render with PostgreSQL (Supabase), recipient management APIs, and automated email distribution through Brevo.
 
-**GitHub:** [Click here](https://github.com/batman00723/Job-Search-Agent/tree/feature/self-correction-loop)
+---
 
-· Architected a multi-node LangGraph pipeline with intent classification, query rewriting, web scraping, and LLM-based resume-to-job matching.
+## RAG Powered Job Matching Agent
 
-· Built a RAG pipeline from scratch — custom chunking, embedding generation, hybrid retrieval (vector + keyword), and cross-encoder reranking.
+- Built an agentic job search pipeline using LangGraph & Django Ninja that autonomously finds, scrapes, and ranks job listings.
+- Designed a Hybrid RAG pipeline (semantic search + keyword extraction + Voyage reranking) to score resume-job fit from 0–100.
+- Implemented intent routing to classify queries into search or chat flows with automatic query rewriting from chat history.
+- Built a self-correcting reflection loop (max_iter=1) to detect LLM hallucinations before surfacing results.
+- Engineered stateful persistence via PostgreSQL Checkpointer, preserving session memory across server restarts.
+- Integrated Crawl4AI for deep job scraping with a 3-retry + query-rewrite fallback on failed searches.
+- Offloaded scraping and LLM inference to Celery + Redis workers for a non-blocking API layer.
 
-· Implemented document ingestion as a decoupled background task using Celery and Redis.
-
-· Integrated Crawl4AI for real-time job page scraping and Tavily for web search with a 3-retry fallback loop on query rewriting.
-
-· Implemented a self-reflection loop where a critique LLM reviews match reports for hallucinations and scoring accuracy before returning results.
-
-· Persisted multi-turn conversation memory using PostgreSQL checkpointing via LangGraph's PostgresSaver.
+---
 
 ## Credit Card Default Risk Modelling | 2025
 
-**GitHub:** [Click here](https://github.com/batman00723/credit_card_default_ml.git)
+**GitHub:** https://github.com/batman00723/credit_card_default_ml.git
 
-· Engineered behavioural risk signals (delinquency recency, payment discipline, utilisation) from 30K records; excluded demographic features like gender to eliminate bias.
-
-· Benchmarked 3 models; rejected Gradient Boosting despite equal ROC-AUC due to validation instability, selected constrained Random Forest for generalisation reliability.
+- Engineered behavioural risk signals (delinquency recency, payment discipline, utilisation) from 30K records; excluded demographic features like gender to eliminate bias.
+- Benchmarked 3 models; rejected Gradient Boosting despite equal ROC-AUC due to validation instability, selected constrained Random Forest for generalisation reliability.
 
 ---
 
-##  Education
-*   **B.E. Computer Science & Engineering**
-*   **Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV)**, Bhopal
-*   *Expected Graduation: 2027*
+# Education
 
-  Currently building AI systems focused on:
+### B.E. Computer Science & Engineering
+
+**Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal**
+
+**Expected Graduation:** 2027
+
+---
+
+## Currently Building AI Systems Focused On
+
 - Autonomous agents
 - Retrieval systems
 - Real-world automation workflows
