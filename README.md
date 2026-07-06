@@ -48,7 +48,7 @@
 
 ## AI Receptionist Agent
 
-**Live Demo:** https://ai-receptionist-e48c.onrender.com/api_v1/docs
+**Live Demo:** https://ai-receptionist-e48c.onrender.com/demo
 
 - Built and deployed an AI Receptionist for dental clinics using LangGraph, automating appointment booking, cancellation, rescheduling, FAQ handling, and emergency escalation.
 - Engineered a stateful scheduling workflow with PostgreSQL-backed memory, validation pipelines, and automated IST→UTC conversion for Cal.com integrations.
