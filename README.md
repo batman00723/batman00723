@@ -3,7 +3,7 @@
 **AI Application Engineer**  
 *Bhopal, India | Final Year CSE @ RGPV University*
 
-[Portfilio](https://portfolio-website-rho-lyart.vercel.app/) | [Email](mailto:batmanmishra23@gmail.com) | [LinkedIn](https://linkedin.com/in/amanmishra232005)
+[Portfilio](https://congenial-sniffle-sigma.vercel.app/) | [Email](mailto:batmanmishra23@gmail.com) | [LinkedIn](https://linkedin.com/in/amanmishra232005)
 
 ---
 
